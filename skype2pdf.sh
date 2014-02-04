@@ -13,10 +13,11 @@ remove_tex_temp() {
     fi
 }
 
+filename=${1%%.*}
 
 
-ruby create_tex.rb $1
-platex -kanji="utf-8" $1.tex
-dvipdfmx $1
-remove_tex_temp $1
-evince "${1}.pdf" &
+ruby create_tex.rb ${filename}
+platex -kanji="utf-8" ${filename}.tex
+dvipdfmx $filename
+remove_tex_temp $filename
+evince "${filename}.pdf" &

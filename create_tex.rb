@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-TITLE = "hoge"
-AUTHOR = "fuga fuga"
+TITLE = "fugafuga"
+AUTHOR = "hogehoge"
 
 header = "\\documentclass[12pt]{article}
 \\usepackage[utf8]{inputenc}
@@ -33,7 +33,7 @@ doc = "\\begin{document}
 \\maketitle"
 
 text = ""
-open(ARGV[0]){|file|
+open(ARGV[0] + ".txt"){|file|
   pre_name = ""
   while l = file.gets
     s = l.index("] ")
